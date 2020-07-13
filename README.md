@@ -11,7 +11,7 @@
 ### Create GKE Cluster
 
 ```bash
-gcloud container clusters create gdg-demo --zone asia-southeast1-a
+gcloud container clusters create gdg-demo --num-nodes 4 --zone asia-southeast1-a
 # Wait for few minutes
 ```
 
@@ -53,7 +53,7 @@ kubectl apply -f 02-deployment.yaml
 kubectl get deployment
 kubectl get pod
 watch kubectl get pod
-# Scale replica on dashboard
+# Scale replica to 3 on dashboard
 ```
 
 ### Deploy Nginx Service
@@ -74,6 +74,7 @@ kubectl apply -f 04-mariadb.yaml
 kubectl get deployment
 kubectl get pod -w
 kubectl get service
+# Wait for a minute to fully start MariaDB
 
 # Test connect to MariaDB
 kubectl exec -it linux -c busybox -- sh
@@ -89,7 +90,7 @@ helm install ingress-nginx ingress-nginx/ingress-nginx
 kubectl get deployment
 kubectl get pod -w
 kubectl get service -w
-# Try to access to ip address
+# Try to access to http://ipaddress
 ```
 
 * Deploy Ingress to Nginx Service
@@ -122,6 +123,17 @@ kubectl get pod --namespace dev
 ```bash
 watch -n1 kubectl get pod
 # Rolling Update on Dashboard to httpd image
+```
+
+### Bonus install Wordpress with Helm
+
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm install wordpress bitnami/wordpress
+kubectl get pod -w
+kubectl get service -w
+# Access via http://ipaddress
 ```
 
 ### Destroy Everything
