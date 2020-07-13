@@ -123,3 +123,9 @@ kubectl get pod --namespace dev
 watch -n1 kubectl get pod
 # Rolling Update on Dashboard to httpd image
 ```
+
+### Destroy Everything
+
+```bash
+gcloud container clusters delete gdg-demo --zone asia-southeast1-a
+```
