@@ -8,7 +8,7 @@
   * Slide: https://www.slideshare.net/opsta/introduction-to-kubernetes-and-gke
 * Introduction to Kubernetes with demo (Thai)
   * Facebook live: https://www.facebook.com/imcinstitute/videos/4199946253380670
-  * Slide: bit.ly/opsta-k8s-intro
+  * Slide: https://bit.ly/opsta-k8s-intro
 
 ## Prequisite
 
