@@ -1,5 +1,15 @@
 # GDG Demo
 
+## Sessions and links
+
+* Introduction to Kubernetes and GKE (English)
+  * Facebook live: https://www.facebook.com/gdgcloudkl/videos/1013942759041907
+  * Youtube live: https://www.youtube.com/watch?v=ht0ynVjkDcI
+  * Slide: https://www.slideshare.net/opsta/introduction-to-kubernetes-and-gke
+* Introduction to Kubernetes with demo (Thai)
+  * Facebook live: https://www.facebook.com/imcinstitute/videos/4199946253380670
+  * Slide: bit.ly/opsta-k8s-intro
+
 ## Prequisite
 
 * gcloud with initial account and project
